@@ -168,11 +168,12 @@ ALTER TABLE deapp.de_snp_data_by_probe OWNER TO deapp;
 ALTER TABLE deapp.de_snp_data_by_probe ADD CONSTRAINT sys_c0020601 PRIMARY KEY (snp_data_by_probe_id);
 
 CREATE TABLE deapp.de_gpl_info (
-	platform varchar(50),
+	platform varchar(50) primary key,
 	title varchar(500),
 	organism varchar(100),
 	annotation_date timestamp,
-	marker_type varchar(100)
+	marker_type varchar(100),
+	genome_build varchar(20)
 );
 ALTER TABLE deapp.de_gpl_info OWNER TO deapp;
 
@@ -519,3 +520,5 @@ ALTER TABLE deapp.DE_SNP_DATA_BY_PATIENT SET TABLESPACE DEAPP;
 ALTER TABLE deapp.DE_SNP_DATA_BY_PROBE SET TABLESPACE DEAPP;
 ALTER TABLE deapp.DE_SNP_PROBE_SORTED_DEF SET TABLESPACE DEAPP;
 ALTER TABLE deapp.HAPLOVIEW_DATA SET TABLESPACE DEAPP;
+
+\i acgh.sql
