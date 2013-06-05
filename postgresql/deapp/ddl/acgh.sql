@@ -1,3 +1,4 @@
+-- vim: set et ts=4 sw=4 :
 CREATE TABLE deapp.de_chromosomal_region (
     region_id     bigserial PRIMARY KEY,
     gpl_id        varchar(50) REFERENCES deapp.de_gpl_info,
@@ -6,6 +7,7 @@ CREATE TABLE deapp.de_chromosomal_region (
     end_bp        bigint,
     num_probes    integer,
     region_name   varchar(100),
+    cytoband      varchar(100),
     -- next: same as de_mrna_annotation
     gene_symbol   varchar(100),
     gene_id       bigint,
