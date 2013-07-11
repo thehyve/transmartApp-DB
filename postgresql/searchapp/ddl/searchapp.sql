@@ -104,7 +104,8 @@ CREATE TABLE searchapp.search_auth_user (
 	email_show boolean,
 	passwd varchar(255),
 	user_real_name varchar(255),
-	username varchar(255)
+	username varchar(255),
+	federated_id varchar(255) unique --added in transmartApp 6e25d5046b
 );
 ALTER TABLE searchapp.search_auth_user OWNER TO searchapp;
 ALTER TABLE searchapp.search_auth_user ADD CONSTRAINT sys_c0011119 PRIMARY KEY (id);
