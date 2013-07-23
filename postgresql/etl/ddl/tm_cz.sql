@@ -448,7 +448,7 @@ CREATE TABLE tm_cz.bio_data_compound_release (
 ALTER TABLE tm_cz.bio_data_compound_release OWNER TO tm_cz;
 CREATE TABLE tm_cz.cz_job_error (
 	job_id bigint NOT NULL,
-	error_number varchar(50),
+	error_number varchar(30),
 	error_message varchar(1000),
 	error_stack varchar(2000),
 	seq_id bigint NOT NULL,
@@ -768,6 +768,7 @@ $BODY$
 CREATE TRIGGER trg_xtrial_ctrl_vocab_id
 	BEFORE INSERT ON tm_cz.cz_xtrial_ctrl_vocab FOR EACH ROW
 	EXECUTE PROCEDURE tm_cz.tf_trg_xtrial_ctrl_vocab_id();
+
 
 
 
