@@ -37,7 +37,8 @@ CREATE TABLE tm_wz.wt_clinical_data_dups (
 	subject_id varchar(20),
 	visit_name varchar(100),
 	data_label varchar(500),
-	category_cd varchar(250)
+	category_cd varchar(250),
+        modifier_cd character varying(100)
 );
 ALTER TABLE tm_wz.wt_clinical_data_dups OWNER TO tm_wz;
 CREATE TABLE tm_wz.wrk_mrna_data (
@@ -90,7 +91,10 @@ CREATE TABLE tm_wz.wrk_clinical_data (
 	subject_id varchar(20),
 	visit_name varchar(100),
 	data_label varchar(500),
+        modifier_cd character varying(100),
 	data_value varchar(500),
+        units_cd character varying(50),
+        date_timestamp timestamp without time zone,
 	category_cd varchar(250),
 	etl_job_id bigint,
 	etl_date timestamp,

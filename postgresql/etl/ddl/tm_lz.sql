@@ -118,7 +118,10 @@ CREATE TABLE tm_lz.lz_src_clinical_data (
 	subject_id varchar(20),
 	visit_name varchar(100),
 	data_label varchar(500),
+        modifier_cd character varying(100),
 	data_value varchar(500),
+        units_cd character varying(50),
+        date_timestamp timestamp without time zone,
 	category_cd varchar(250),
 	etl_job_id bigint,
 	etl_date timestamp,
@@ -131,7 +134,10 @@ CREATE TABLE tm_lz.lt_src_clinical_data (
 	subject_id varchar(20),
 	visit_name varchar(100),
 	data_label varchar(500),
+        modifier_cd character varying(100),
 	data_value varchar(500),
+        units_cd character varying(50),
+        date_timestamp timestamp without time zone,
 	category_cd varchar(250),
 	ctrl_vocab_code varchar(200)
 );
